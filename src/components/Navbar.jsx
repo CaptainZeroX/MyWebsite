@@ -33,7 +33,7 @@ const Navbar = () => {
             key={nav.id}
             className={`${
               active === nav.title ? "text-glow" : "text-slate-200"
-            } hover:text-glow ease-in-out duration-300 text-[30px] cursor-pointer`}
+            } hover:text-glow ease-in-out duration-300 text-[28px] cursor-pointer`}
             onClick={() => handleNavLinkClick(nav.title)}
             onMouseEnter={() => setActive(nav.title)}
             onMouseLeave={() => setActive("")}

@@ -7,14 +7,13 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <ComputersCanvas className="z-1" />
-      <div className="absolute inset-x-0  bottom-36 md:bottom-32 top-126 max-w-7xl mx-auto flex flex-column items-end justify-center gap-5">
+      <div className="absolute inset-x-0 xs:bottom-10 sm:bottom-20 bottom-28 top-126 max-w-7xl mx-auto flex flex-column items-end justify-center gap-5">
         <div className="z-2 text-center">
           <h1 className={`${styles.heroHeadText} text-white`}>MOHD LUTFI</h1>
-          <p className={`${styles.heroSubText} sm:mt-8 text-white`}>
+          <p className={`${styles.heroSubText} sm:mt-6 text-white`}>
             Front-end Developer & UI/UX Designer
           </p>
         </div>
-        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"></div>
       </div>
     </section>
   );

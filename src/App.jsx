@@ -12,7 +12,7 @@ import Projects from "./components/Projects";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-black ">
         <div className=" bg-secondary bg-cover bg-no-repeat bg-center">
           {" "}
           {/*bg-gradient-to-b from-[#210B21]*/}
