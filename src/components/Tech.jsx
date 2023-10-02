@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import { SectionWrapper } from "../hoc";
 
 const Tech = () => {
-    return(
-        <div>Tech</div>
-    )
-}
+  return (
+    <>
+      <h1>Tech</h1>
+    </>
+  );
+};
 
-export default Tech;
+export default SectionWrapper(Tech, "");

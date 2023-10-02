@@ -13,17 +13,18 @@ const About = () => {
         <p className={styles.sectionHeadText}>{"<ABOUT ME/>"}</p>
       </motion.div>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className=" text-white lg:text-[42px] sm:text-[32px] xs:text-[20px] text-[42px] max-w-3xl lg:leading-[56px] sm:leading-[34px] xs:leading-[22px] leading-[56px] font-semibold"
+          className=" text-white lg:text-[36px] sm:text-[30px] xs:text-[20px] text-[24px]  lg:leading-[50px] sm:leading-[34px] xs:leading-[22px] leading-[30px] font-semibold sm:pt-6 pt-0"
         >
-          I am a univeristy student who is passoinate about front-end dev and
-          UI/UX design. I yearn to create the perfect design for everyone
-          anytime.
+          I am a <a className="text-purple-400">univeristy student</a> who is
+          passoinate about <a className="text-yellow-500">front-end dev</a> &{" "}
+          <a className="text-red-300">UI/UX design</a> I yearn to create the
+          perfect design for everyone
         </motion.p>
 
-        <Orbit />
+        <Orbit className="" />
       </div>
     </>
   );

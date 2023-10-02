@@ -33,7 +33,7 @@ const Navbar = () => {
             key={nav.id}
             className={`${
               active === nav.title ? "text-glow" : "text-slate-200"
-            } hover:text-glow ease-in-out duration-300 text-[28px] cursor-pointer`}
+            } hover:text-glow ease-in-out duration-300 text-[26px] cursor-pointer`}
             onClick={() => handleNavLinkClick(nav.title)}
             onMouseEnter={() => setActive(nav.title)}
             onMouseLeave={() => setActive("")}
@@ -47,7 +47,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex py-20 fixed top-0 z-20 ${
+      className={`${
+        styles.paddingX
+      } w-full flex sm:py-20 py-10 fixed top-0 z-20 ${
         scrolled ? "bg-transparent" : "bg-transparent"
       }`}
     >
