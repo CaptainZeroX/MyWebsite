@@ -11,7 +11,7 @@ const styles = {
   sectionHeadText:
     "text-white text-opacity-40 tracking-wider font-extrabold lg:text[100] md:text-[90px] sm:text-[50px] xs:text-[40px] text-[38px]",
   sectionSubText:
-    " text-white lg:text-[36px] sm:text-[30px] xs:text-[20px] text-[42px]  lg:leading-[50px] sm:leading-[34px] xs:leading-[22px] leading-[50px] font-semibold pt-6",
+    "text-white lg:text-[36px] sm:text-[30px] xs:text-[20px] text-[24px]  lg:leading-[50px] sm:leading-[34px] xs:leading-[22px] leading-[30px] font-semibold ",
 };
 
 export { styles };
