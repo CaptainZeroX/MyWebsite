@@ -29,7 +29,7 @@ const About = () => {
         <div>
           <div className="flex flex-wrap gap-7 z-1">
             <img src={cloud} alt="cloud" className="w-[105px] h-[105px]"></img>
-            <img src={cloud} alt="cloud" className="w-[120px] h-[120px]"></img>
+            <img src={cloud} alt="cloud" className="w-[115px] h-[115px]"></img>
           </div>
           <div className="">
             <div className="bg-purple-400 hover:bg-transparent hover:ease-in-out duration-300 rounded-2xl w-[210px] h-[225px] relative">
