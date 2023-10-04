@@ -7,6 +7,7 @@ import { SectionWrapper } from "../hoc";
 import Orbit from "./canvas/Orbit";
 import profile from "../assets/profile.jpg";
 import cloud from "../assets/cloud.png";
+import Draggable from "react-draggable";
 
 const About = () => {
   return (
@@ -26,20 +27,35 @@ const About = () => {
           perfect design for everyone
         </motion.p>
 
-        <div>
-          <div className="flex flex-wrap gap-7 z-1">
-            <img src={cloud} alt="cloud" className="w-[105px] h-[105px]"></img>
-            <img src={cloud} alt="cloud" className="w-[115px] h-[115px]"></img>
+        <div className="mx-auto relative">
+          <div className="flex flex-wrap my-[-50px] gap-7 z-1 invisible sm:visible md:visible">
+            <Draggable>
+              <img
+                src={cloud}
+                alt="cloud"
+                className="w-[105px] h-[105px] z-10 my-[-50px] "
+              ></img>
+            </Draggable>
+            <Draggable>
+              <img
+                src={cloud}
+                alt="cloud"
+                className="w-[115px] h-[115px] z-10 my-[-5px] "
+              ></img>
+            </Draggable>
           </div>
-          <div className="">
-            <div className="bg-purple-400 hover:bg-transparent hover:ease-in-out duration-300 rounded-2xl w-[210px] h-[225px] relative">
+
+          <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)} className="">
+            {/* bg-purple-500 hover:bg-transparent hover:ease-in-out duration-300 */}
+            <div className=" rounded-2xl w-[210px] h-[225px] relative">
               <img
                 src={profile}
                 alt="profile-picture"
-                className=" w-[210px] h-[225px] object-cover rounded-2xl absolute mix-blend-overlay "
+                className=" w-[210px] h-[225px] object-cover rounded-2xl absolute  z-0"
               ></img>
+              {/* opacity-30 hover:opacity-100 transition duration-200 ease-in-out */}
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* <Orbit className="" /> */}
