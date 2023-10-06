@@ -29,32 +29,57 @@ const About = () => {
 
         <div className="mx-auto relative">
           <div className="flex flex-wrap my-[-50px] gap-7 z-1 invisible sm:visible md:visible">
-            <Draggable>
-              <img
+            <motion.div
+              variants={fadeIn("up", "spring", 0.5, 0.75)}
+              className="z-10"
+            >
+              <motion.img
                 src={cloud}
                 alt="cloud"
                 className="w-[105px] h-[105px] z-10 my-[-50px] "
-              ></img>
-            </Draggable>
-            <Draggable>
-              <img
+                drag
+                dragConstraints={{
+                  top: -50,
+                  left: -50,
+                  right: 50,
+                  bottom: 50,
+                }}
+              ></motion.img>
+            </motion.div>
+            <motion.div
+              variants={fadeIn("up", "spring", 0.5, 0.75)}
+              className="z-10"
+            >
+              <motion.img
                 src={cloud}
                 alt="cloud"
                 className="w-[115px] h-[115px] z-10 my-[-5px] "
-              ></img>
-            </Draggable>
+                drag
+                dragConstraints={{
+                  top: -50,
+                  left: -50,
+                  right: 50,
+                  bottom: 50,
+                }}
+              ></motion.img>
+            </motion.div>
           </div>
 
           <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)} className="">
             {/* bg-purple-500 hover:bg-transparent hover:ease-in-out duration-300 */}
-            <div className=" rounded-2xl w-[210px] h-[225px] relative">
-              <img
+            <motion.div
+              className=" rounded-2xl w-[210px] h-[225px] relative"
+              drag
+            >
+              <motion.img
                 src={profile}
                 alt="profile-picture"
-                className=" w-[210px] h-[225px] object-cover rounded-2xl absolute  z-0"
-              ></img>
+                className=" w-[210px] h-[225px] object-cover rounded-2xl absolute  z-9"
+                drag
+                dragSnapToOrigin={true}
+              ></motion.img>
               {/* opacity-30 hover:opacity-100 transition duration-200 ease-in-out */}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
