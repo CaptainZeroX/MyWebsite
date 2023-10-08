@@ -1,9 +1,21 @@
-import React from 'react';
-
+import React from "react";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { motion } from "framer-motion";
+import { textVariant } from "../utils/motion";
+import PhoneCanvas from "./canvas/Phone";
 const Contact = () => {
-    return(
-        <div>Contact</div>
-    )
-}
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionHeadText}>CONTACT</p>
+        <PhoneCanvas />
 
-export default Contact;
+        <p> Hekllo</p>
+        {/*{<"ABOUT ME/>"} */}
+      </motion.div>
+    </>
+  );
+};
+
+export default SectionWrapper(Contact, "contact");

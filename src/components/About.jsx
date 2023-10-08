@@ -13,10 +13,11 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionHeadText}>{"<ABOUT ME/>"}</p>
+        <p className={styles.sectionHeadText}>ABOUT ME</p>{" "}
+        {/*{<"ABOUT ME/>"} */}
       </motion.div>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className={`${styles.sectionSubText} sm:pt-6 pt-0`}
@@ -31,7 +32,7 @@ const About = () => {
           <div className="flex flex-wrap my-[-50px] gap-7 z-1 invisible sm:visible md:visible">
             <motion.div
               variants={fadeIn("up", "spring", 0.5, 0.75)}
-              className="z-10"
+              className="z-10 "
             >
               <motion.img
                 src={cloud}
@@ -44,11 +45,18 @@ const About = () => {
                   right: 50,
                   bottom: 50,
                 }}
+                animate={{
+                  y: [11, 15, 18, 15, 11],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                }}
               ></motion.img>
             </motion.div>
             <motion.div
               variants={fadeIn("up", "spring", 0.5, 0.75)}
-              className="z-10"
+              className="z-10 "
             >
               <motion.img
                 src={cloud}
@@ -60,6 +68,13 @@ const About = () => {
                   left: -50,
                   right: 50,
                   bottom: 50,
+                }}
+                animate={{
+                  y: [12, 10, 15, 18, 12],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
                 }}
               ></motion.img>
             </motion.div>
