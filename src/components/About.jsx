@@ -5,7 +5,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import Orbit from "./canvas/Orbit";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.png";
 import cloud from "../assets/cloud.png";
 import Draggable from "react-draggable";
 
@@ -37,7 +37,7 @@ const About = () => {
               <motion.img
                 src={cloud}
                 alt="cloud"
-                className="w-[105px] h-[105px] z-10 my-[-50px] "
+                className="w-[105px] h-[105px] z-10 my-[-45px] "
                 drag
                 dragConstraints={{
                   top: -50,
@@ -61,7 +61,7 @@ const About = () => {
               <motion.img
                 src={cloud}
                 alt="cloud"
-                className="w-[115px] h-[115px] z-10 my-[-5px] "
+                className="w-[115px] h-[115px] z-10 my-[-9px] "
                 drag
                 dragConstraints={{
                   top: -50,
@@ -89,7 +89,7 @@ const About = () => {
               <motion.img
                 src={profile}
                 alt="profile-picture"
-                className=" w-[210px] h-[225px] object-cover rounded-2xl absolute  z-9"
+                className=" w-[215px] h-[230px] object-cover rounded-2xl absolute  z-9"
                 drag
                 dragSnapToOrigin={true}
               ></motion.img>
