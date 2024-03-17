@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -9,15 +9,16 @@ import profile from "../assets/profile.png";
 import cloud from "../assets/cloud.png";
 
 
+
 const About = () => {
   return (
-    <>
+    <section className="relative w-full h-screen mx-auto my-auto">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionHeadText}>ABOUT ME</p>{" "}
         {/*{<"ABOUT ME/>"} */}
       </motion.div>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="sm:mt-40 grid grid-cols-1 sm:grid-cols-2 gap-5">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className={`${styles.sectionSubText} sm:pt-6 pt-0`}
@@ -29,9 +30,9 @@ const About = () => {
         </motion.p>
 
         <div className="mx-auto relative">
-          <div className="flex flex-wrap my-[-50px] gap-7 z-1 invisible sm:visible md:visible">
+          <div className="flex flex-wrap my-[-40px] gap-10 z-1 invisible sm:visible md:visible">
             <motion.div
-              variants={fadeIn("up", "spring", 0.5, 0.75)}
+              variants={fadeIn("up", "spring",1.2, 0.75)}
               className="z-10 "
             >
               <motion.img
@@ -55,7 +56,7 @@ const About = () => {
               ></motion.img>
             </motion.div>
             <motion.div
-              variants={fadeIn("up", "spring", 0.5, 0.75)}
+              variants={fadeIn("up", "spring", 1, 0.75)}
               className="z-10 "
             >
               <motion.img
@@ -83,15 +84,14 @@ const About = () => {
           <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)} className="">
             {/* bg-purple-500 hover:bg-transparent hover:ease-in-out duration-300 */}
             <motion.div
-              className=" rounded-2xl w-[210px] h-[225px] relative"
+              className=" rounded-2xl w-[230px] h-[255px] relative mx-auto bg-purple-500 hover:bg-transparent hover:ease-in-out duration-300"
               drag
             >
               <motion.img
                 src={profile}
                 alt="profile-picture"
-                className=" w-[215px] h-[230px] object-cover rounded-2xl absolute  z-9"
-                drag
-                dragSnapToOrigin={true}
+                className=" w-[230px] h-[255px] object-cover rounded-2xl absolute mx-auto z-9"
+               
               ></motion.img>
               {/* opacity-30 hover:opacity-100 transition duration-200 ease-in-out */}
             </motion.div>
@@ -100,7 +100,7 @@ const About = () => {
 
         {/* <Orbit className="" /> */}
       </div>
-    </>
+    </section>
   );
 };
 

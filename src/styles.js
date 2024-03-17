@@ -9,9 +9,9 @@ const styles = {
     "text-[#dfd9ff] font-medium lg:text-[38px] md:text-[32] sm:text-[28px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
   sectionHeadText:
-    "text-white text-opacity-40 tracking-wider font-extrabold lg:text[100] md:text-[90px] sm:text-[50px] xs:text-[40px] text-[38px]",
+    "text-white text-opacity-40 tracking-wider font-extrabold lg:text[100] md:text-[96px] sm:text-[50px] xs:text-[40px] text-[38px]",
   sectionSubText:
-    "text-white lg:text-[36px] sm:text-[30px] xs:text-[20px] text-[24px]  lg:leading-[50px] sm:leading-[34px] xs:leading-[22px] leading-[30px] font-semibold ",
+    "text-white lg:text-[42px] sm:text-[30px] xs:text-[20px] text-[24px]  lg:leading-[50px] sm:leading-[34px] xs:leading-[22px] leading-[30px] font-semibold ",
 };
 
 export { styles };
