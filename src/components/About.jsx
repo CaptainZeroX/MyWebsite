@@ -7,7 +7,7 @@ import { SectionWrapper } from "../hoc";
 import Orbit from "./canvas/Orbit";
 import profile from "../assets/profile.png";
 import cloud from "../assets/cloud.png";
-import Draggable from "react-draggable";
+
 
 const About = () => {
   return (

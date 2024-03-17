@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import { PerspectiveCamera } from "@react-three/drei";
-import { EffectComposer,Pixelation, DepthOfField, Bloom, Noise, Vignette, SSAO} from "@react-three/postprocessing";
+import { EffectComposer,Pixelation,BrightnessContrast, HueSaturation, ChromaticAberration,DepthOfField, Bloom, Noise, Vignette, SSAO} from "@react-three/postprocessing";
 import { BlurPass, Resizer, KernelSize } from 'postprocessing';
 import { SelectiveBloom } from "@react-three/postprocessing";
 
@@ -14,8 +14,8 @@ const Phone = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={1} color={[1.3,1,0.4]}/>
-    <primitive object={phone.scene}  scale={2.2}
+      <hemisphereLight intensity={1} groundColor="purple"/>
+    <primitive object={phone.scene}  scale={2.3}
        position={[0, -10, 0]}
         rotation={[-0, -0, -0]} />
     </mesh>
@@ -39,14 +39,17 @@ const PhoneCanvas = () => {
        
       <Suspense fallback={<CanvasLoader />}>
       <EffectComposer smaa>
-       <Pixelation
-        granularity={1} // pixel granularity
-        />
-        <Bloom
-          intensity={1.4}
-          luminanceThreshold={0.1}
+      
+         <ChromaticAberration offset={[0.002, 0.0]} />
+        <HueSaturation hue={0.5} saturation={0.85} />
+       
+        <BrightnessContrast contrast={0.05} />
+        /<Bloom
+          intensity={3}
+          luminanceThreshold={0.08}
           luminanceSmoothing={0.015}
-          mipmapBlur={false}
+          mipmapBlur={true}
+          radius={0.75}
         />
    
     <SSAO />
@@ -56,7 +59,7 @@ const PhoneCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          target={[0, 0, 0]}
+          target={[-1, 0, 0]}
         />
         <Phone />
 
