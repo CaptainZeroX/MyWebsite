@@ -62,16 +62,16 @@ const ProjectCard = ({
 
 const Projects = () => {
   return (
-    <>
+    <section className="relative w-full h-screen mx-auto my-auto">
       <motion.div variants={textVariant()}>
         <h2 className={styles.sectionHeadText}> PROJECTS </h2>
       </motion.div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-24 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 export default SectionWrapper(Projects, "projects");
