@@ -198,20 +198,20 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "IoT-Based Heater Controller",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A smart heater control system that allows users to adjust the temperature of their heaters from anywhere using a mobile app.",
     tags: [
       {
-        name: "react",
+        name: "Arduino",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "C",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "esp32",
         color: "pink-text-gradient",
       },
     ],
@@ -219,7 +219,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Pystorm",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
