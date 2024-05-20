@@ -22,6 +22,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  pystorms,
   threejs,
 } from "../assets";
 
@@ -219,41 +220,41 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Pystorm",
+    name: "Pystoarm",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A python app that programs 2 wheel robot visually using a drag and drop interface.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Pygame",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "EV3 Mindstorms",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: pystorms,
+    source_code_link: "https://github.com/CaptainZeroX/pystoarms",
   },
   {
-    name: "Trip Guide",
+    name: "Brightness Data Logger",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A data logger that records the brightness levels of a room and displays the data on lcd screen.",
     tags: [
       {
-        name: "nextjs",
+        name: "Atmega88pa",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Eeprom",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "photoresistor",
         color: "pink-text-gradient",
       },
     ],
